@@ -11,3 +11,28 @@
     </div>
   </div>
 </div>
+<app-inputdemo sometext = "This is an outside text"></app-inputdemo>
+
+
+<app-outputdemo  (smthigchanged) = "appoutputeventhandler($event)"></app-outputdemo>
+
+<div class="container" appAttributedirective>
+  This is coming from Output demo component to App component 
+  <div style="background-color: lightgoldenrodyellow;margin-bottom: 20px;">
+    {{outputvalue}}
+  </div>
+</div>
+
+<app-view-child-demo></app-view-child-demo>
+
+<div  #contentchild> 
+  hi i am part of content child
+</div>
+
+  
+<app-content-demo>
+
+  <div class ="container" #contentchild>
+      I am the division of content.
+  </div>
+</app-content-demo>

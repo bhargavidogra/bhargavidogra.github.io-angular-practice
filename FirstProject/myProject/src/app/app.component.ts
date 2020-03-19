@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myProject';
+  outputvalue :string;
+
+
+  appoutputeventhandler(event :any){
+        this.outputvalue = event;
+  }
 }
