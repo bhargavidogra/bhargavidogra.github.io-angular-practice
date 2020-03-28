@@ -1,0 +1,13 @@
+<div *ngFor="let user of usersList">
+    <!-- <span (click)="showDetails(user.id)">{{user.firstName}}</span> -->
+    <div *ngIf="user.isDeleted">
+        <div class="card" style="width: 80%;border:2px solid orangered ;margin: 5px 150px;">
+            <div class="card-body">
+                <h5 class="card-title">{{user.name}} User</h5>
+                <button (click)="showDetails(user.id)" class="btn btn-success"
+                    style="margin-left: 90%;">Activate</button>
+            </div>
+        </div>
+    </div>
+
+</div>

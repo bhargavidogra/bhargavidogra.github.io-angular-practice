@@ -1,0 +1,28 @@
+.container1 {
+    border: 2px solid lightgreen;
+    border-radius: 2px;
+    padding: 5px;
+    margin-top: 5px;
+    
+}
+
+.container2 {
+    border: 2px solid orangered;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+ div {
+     margin-bottom: 10px;
+ }
+
+ .deleted{
+     color: orangered;
+     font-family: cursive;
+     font-size: small;
+ }
+ .active{
+    color: lightgreen;
+    font-family: cursive;
+    font-size: small;
+}
