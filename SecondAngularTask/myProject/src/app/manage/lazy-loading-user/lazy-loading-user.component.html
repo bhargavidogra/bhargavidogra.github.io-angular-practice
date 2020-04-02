@@ -1,24 +1,28 @@
 <div *ngIf="!user.isDeleted" class="container1">
-    <h3> {{user?.name}} User</h3>
+    <h3> {{user?.firstNam}} User</h3>
     <div>
         <p class="active">Active</p>
     </div>
     <div>Login Id: {{user?.id}} </div>
     <div>First Name: {{user?.firstName}} </div>
     <div>Last Name: {{user?.lastName}}</div>
+    <div>Complete Name : {{user?.lastName | concatName: user?.firstName}}</div>
     <div>Age: {{user?.age}}</div>
+    <!-- <div><i>Last Updated: {{updatedAt | date}}</i></div> -->
 </div>
 
 
 
 
 <div *ngIf="user.isDeleted" class="container2">
-    <h3> {{user?.name}} User</h3>
+    <h3> {{user?.firstName}} User</h3>
     <div>
         <p class="deleted">Deleted</p>
     </div>
     <div>Login Id: {{user?.id}} </div>
     <div>First Name: {{user?.firstName}} </div>
     <div>Last Name: {{user?.lastName}}</div>
+    <div>Complete Name : {{user?.lastName | concatName: user?.firstName}}</div>
     <div>Age: {{user?.age}}</div>
+    <!-- <div><i>Last Updated: {{updatedAt | date}}</i></div> -->
 </div>

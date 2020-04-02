@@ -1,5 +1,5 @@
 <div class="nav-bar">
-  <div><a routerLink="/">Home</a></div>
+  <div routerLinkActive="active" [routerLinkActiveOptions]='{exact:true}'><a routerLink="/">Home</a></div>
   <div routerLinkActive="active"><a routerLink="active">Active</a></div>
   <div routerLinkActive="active"><a routerLink="delete">Deleted</a></div>
   <div routerLinkActive="active"><a routerLink="manageUsers">Manage</a></div>

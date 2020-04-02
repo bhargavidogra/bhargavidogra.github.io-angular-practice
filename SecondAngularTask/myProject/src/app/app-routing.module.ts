@@ -14,7 +14,7 @@ const appRoutes: Routes = [
         loadChildren: ()=> import('./manage/manage.module').then(
             (file) => file.ManageModule
         )
-    }
+    },
 ];
 
 @NgModule({

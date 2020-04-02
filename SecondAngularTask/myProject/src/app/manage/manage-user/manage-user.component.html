@@ -1,15 +1,31 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-4">
+
+        <div class="col-lg-2">
+
+            <br>
+            <button (click)="CreatingAUser()" class="btn btn-success"
+                style="display: flex;flex-direction: row;">Create</button>
+            <br>
+
+            <button (click)="getAllUsers()" class="btn btn-primary">All Users</button>
+
+        </div>
+        <div class="col-lg-3">
 
             <div *ngFor="let user of usersList">
                 <!-- <span (click)="showDetails(user.id)">{{user.firstName}}</span> -->
                 <div *ngIf="user.isDeleted">
                     <div class="card" style="width: 23rem;border:2px solid orangered ;margin-top: 5px;">
                         <div class="card-body">
-                            <h5 class="card-title">{{user.name}} User</h5>
-                            <button (click)="showDetails(user.id)" style="margin-left: 250px;"
-                                class="btn btn-primary">Details</button>
+                            <h5 class="card-title">{{user.firstName}} User</h5>
+
+                            <button (click)="editDetails(user.id)" class="btn btn-warning">Edit</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button (click)="showDetails(user.id)" class="btn btn-primary">Details</button>
+
                         </div>
                     </div>
                 </div>
@@ -17,9 +33,13 @@
                 <div *ngIf="!user.isDeleted">
                     <div class="card" style="width: 23rem;border:2px solid lightgreen ;margin-top: 5px;">
                         <div class="card-body">
-                            <h5 class="card-title">{{user.name}} User</h5>
-                            <button (click)="showDetails(user.id)" style="margin-left: 250px;"
-                                class="btn btn-primary">Details</button>
+                            <h5 class="card-title">{{user.firstName}} User</h5>
+
+                            <button (click)="editDetails(user.id)" class="btn btn-warning">Edit</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button (click)="showDetails(user.id)" class="btn btn-primary">Details</button>
                         </div>
                     </div>
                 </div>
@@ -31,6 +51,36 @@
         </div>
 
         <div class="col-lg-6">
+
+
+            <div id="createauser" style="display:none;">
+
+                <div class="container">
+                    <div class="formclass">
+                        <br>
+                        <label>Enter Details for creating User </label>
+                        <div class="formrow"><label>First Name</label> <input type="text" [(ngModel)]="fname" /></div>
+
+                        <div class="formrow"><label>Last Name</label><input type="text" [(ngModel)]="lname" /></div>
+
+                        <div class="formrow"><label>Email address(Login Id)</label> <input type="text"
+                                [(ngModel)]="login" /></div>
+
+                        <div class="formrow"><label>Password</label><input type="text" [(ngModel)]="password" /></div>
+
+                        <div class="formrow"> <label>Age</label><input type="number" [(ngModel)]="age" /></div>
+                        <br>
+                        <div>
+                            <button class="btn btn-primary" (click)="createUser()">
+                                Create User
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
             <router-outlet></router-outlet>
         </div>
     </div>

@@ -9,18 +9,19 @@ import { DeletedModule } from './deleted/deleted.module';
 import { UserService } from './user.service';
 import { AttributeDirectiveDirective } from './attribute-directive.directive';
 import { AttributeisActiveDirective } from './attributeis-active.directive';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent, AttributeDirectiveDirective, AttributeisActiveDirective 
+    AppComponent,HomeComponent, AttributeDirectiveDirective, AttributeisActiveDirective,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ActiveModule,
     DeletedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
